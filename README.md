@@ -1,5 +1,7 @@
 # MavenPom
 
+[![Build Status](https://secure.travis-ci.org/finn-no/maven_pom.png)](http://travis-ci.org/finn-no/maven_pom)
+
 Tiny library to work with Maven's pom.xml files from Ruby.
 
 The code was extracted and gemified from an internal project. The API and functionality is based on that project's relatively simple needs. For instance, it does not care about artifact versions and won't check the validity of the poms.
