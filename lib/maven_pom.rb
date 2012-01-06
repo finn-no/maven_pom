@@ -10,7 +10,7 @@ module MavenPom
     Pom.new File.read(path), path
   end
 
-  def sort(poms)
+  def self.sort(poms)
     Sorter.new(poms).sort
   end
 end

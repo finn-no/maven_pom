@@ -38,6 +38,10 @@ module MavenPom
       ]
     end
 
+    it "has a shortcut on the module" do
+      MavenPom.sort(poms).should be_kind_of(Array)
+    end
+
   end
 end
 
