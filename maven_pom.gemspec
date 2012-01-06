@@ -3,10 +3,10 @@ require File.expand_path('../lib/maven_pom/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Jari Bakken"]
-  gem.email         = ["jari.bakken@gmail.com"]
+  gem.email         = ["jari.bakken@finn.no"]
   gem.description   = %q{Tiny library to work with Maven's pom.xml files from Ruby.}
   gem.summary       = %q{Tiny library to work with Maven's pom.xml files from Ruby.}
-  gem.homepage      = ""
+  gem.homepage      = "http://github.com/finn-no/maven_pom"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
