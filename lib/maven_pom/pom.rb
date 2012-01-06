@@ -5,7 +5,6 @@ module MavenPom
     def initialize(str, uri)
       @pom = Nokogiri.XML(str)
       @uri = uri
-      @dir = File.dirname(uri)
     end
 
     def as_json(opts = nil)
