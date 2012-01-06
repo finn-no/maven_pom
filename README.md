@@ -25,15 +25,15 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-    pom = MavenPom.from("path/to/some/pom.xml")
+pom = MavenPom.from("path/to/some/pom.xml")
 
-    pom.packaging     #=> "pom"
-    pom.parent        #=> "com.example:parent"
-    pom.key           #=> "com.example:this"
-    pom.dependencies  #=> ["com.example:foo", "com.example:bar"]
+pom.packaging     #=> "pom"
+pom.parent        #=> "com.example:parent"
+pom.key           #=> "com.example:this"
+pom.dependencies  #=> ["com.example:foo", "com.example:bar"]
 
-    # topological sort - should roughly match e.g. reactor order
-    MavenPom.sort [pom1, pom2, pom3]
+# topological sort - should roughly match e.g. reactor order
+MavenPom.sort [pom1, pom2, pom3]
 ```
 
 
