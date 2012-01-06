@@ -24,6 +24,7 @@ Or install it yourself as:
 
 ## Usage
 
+```ruby
     pom = MavenPom.from("path/to/some/pom.xml")
 
     pom.packaging     #=> "pom"
@@ -33,6 +34,7 @@ Or install it yourself as:
 
     # topological sort - should roughly match e.g. reactor order
     MavenPom.sort [pom1, pom2, pom3]
+```
 
 
 ## Contributing
