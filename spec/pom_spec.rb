@@ -44,5 +44,9 @@ module MavenPom
     it "has a key" do
       war_module.key.should == "com.example:example-war"
     end
+
+    it "can get the pom's properties" do
+      pom_module.properties.should == {'version.jdk' => '1.7'}
+    end
   end
 end

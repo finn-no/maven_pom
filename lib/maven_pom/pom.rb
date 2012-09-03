@@ -80,6 +80,16 @@ module MavenPom
       end
     end
 
+    def properties
+      props = {}
+
+      @pom.css("project > properties > *").each do |element|
+        props[element.name] = element.inner_text
+      end
+
+      props
+    end
+
     def dependency_name_from(node)
       gid = node.css("groupId").text
       aid = node.css("artifactId").text

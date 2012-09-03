@@ -9,6 +9,10 @@
   <version>1.0.0</version>
   <packaging>pom</packaging>
 
+  <properties>
+    <version.jdk>1.7</version.jdk>
+  </properties>
+
   <dependencies>
 
     <dependency>
