@@ -19,7 +19,8 @@ module MavenPom
     end
 
     it "knows the module's parent" do
-      child_module.parent.should == "com.example:parent"
+      child_module.parent.should == pom_module.key
+      child_module.parent_pom.should == pom_module
     end
 
     it "knows the module's build plugins" do

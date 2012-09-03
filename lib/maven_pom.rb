@@ -6,6 +6,10 @@ require "maven_pom/pom"
 require "maven_pom/sorter"
 
 module MavenPom
+  def self.all
+    @loaded ||= {}
+  end
+
   def self.from(path)
     Pom.new File.read(path), path
   end

@@ -5,6 +5,8 @@ module MavenPom
     def initialize(str, uri)
       @pom = Nokogiri.XML(str)
       @uri = uri
+
+      MavenPom.all[key] = self
     end
 
     def as_json(opts = nil)
@@ -18,6 +20,10 @@ module MavenPom
 
     def to_json(*args)
       as_json.to_json(*args)
+    end
+
+    def inspect
+      "#<MavenPom::Pom:0x%x key=%s name=%s parent=%s>" % [object_id << 1, key.inspect, name.inspect, parent.inspect]
     end
 
     def packaging
@@ -54,6 +60,10 @@ module MavenPom
       end
 
       gid
+    end
+
+    def parent_pom
+      MavenPom.all[parent]
     end
 
     def artifact_id
